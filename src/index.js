@@ -1,3 +1,5 @@
 import { createHomePage } from "./home.js";
 
-createHomePage();
+(function startWebsite() {
+    createHomePage();
+})();
