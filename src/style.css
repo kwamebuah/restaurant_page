@@ -17,3 +17,19 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
+
+header {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 25, 12);
+    color:rgb(231, 239, 246);
+}
+
+.restaurant-name {
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 0.1ch;
+    padding: 0 1rem;
+}
