@@ -33,3 +33,22 @@ header {
     letter-spacing: 0.1ch;
     padding: 0 1rem;
 }
+
+nav {
+    margin-right: 1rem;
+}
+
+.nav-button {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    letter-spacing: 0.1ch;
+    color: rgb(231, 239, 246);
+    background-color: transparent;
+    border: none;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
