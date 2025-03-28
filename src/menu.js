@@ -1,7 +1,7 @@
-import meal1 from "./images/keesha-s-kitchen-woC24wGXsQ8-unsplash.jpg";
-import meal2 from "./images/michele-blackwell-rAyCBQTH7ws-unsplash.jpg";
-import meal3 from "./images/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg";
-import meal4 from "./images/keesha-s-kitchen-KRbF_wsztBE-unsplash.jpg";
+import meal1 from "./images/menu/keesha-s-kitchen-woC24wGXsQ8-unsplash.jpg";
+import meal2 from "./images/menu/michele-blackwell-rAyCBQTH7ws-unsplash.jpg";
+import meal3 from "./images/menu/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg";
+import meal4 from "./images/menu/keesha-s-kitchen-KRbF_wsztBE-unsplash.jpg";
 
 export function createMenu() {
     const mainContent = document.querySelector('#content');
