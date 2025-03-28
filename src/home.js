@@ -1,13 +1,20 @@
 export function createHomePage() {
     const mainContent = document.querySelector('#content');
-    const headline = document.createElement('p');
+    const shader = document.createElement('div');
+    const headline = document.createElement('h3');
+    const heroMessage = document.createElement('p');
 
     // Clear previous page
     while (mainContent.firstChild) {
         mainContent.removeChild(mainContent.firstChild);
     }
 
-    headline.textContent = 'Welcome to Gentium! Here, you will find rich delicacies from around the globe.';
+    shader.classList.add('background-shader');
+    headline.textContent = 'Welcome to Gentium';
+    heroMessage.classList.add('hero-message');
+    heroMessage.textContent = 'Here, you will find rich delicacies from across the globe.';
 
-    mainContent.appendChild(headline);
+    shader.appendChild(headline);
+    shader.appendChild(heroMessage);
+    mainContent.appendChild(shader);
 }
