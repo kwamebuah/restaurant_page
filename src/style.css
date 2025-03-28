@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#content {
+    color: aliceblue;
+    background-image: url("./images/bg_img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
