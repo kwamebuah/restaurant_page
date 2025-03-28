@@ -1,6 +1,8 @@
+import "./style.css";
 import { createHomePage } from "./home.js";
 import { createContact } from "./contact.js";
 import { createMenu } from "./menu.js";
+
 
 (function startWebsite() {
     createHomePage();
