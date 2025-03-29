@@ -1,13 +1,13 @@
 export function createContact() {
     const mainContent = document.querySelector('#content');
-    const contactPage = document.createElement('div');
+    const shader = document.createElement('div');
     const locSection = document.createElement('section');
-    const locHeading = document.createElement('h3');
+    const locHeading = document.createElement('h4');
     const address = document.createElement('address');
     const addressInfo = document.createElement('pre');
     const phone = document.createElement('p');
     const formSection = document.createElement('section');
-    const formHeading = document.createElement('h3');
+    const formHeading = document.createElement('h4');
     const form = document.createElement('form');
     const sendBtn = document.createElement('button');
 
@@ -16,9 +16,12 @@ export function createContact() {
         mainContent.removeChild(mainContent.firstChild);
     }
 
+    shader.classList.add('background-shader');
+    shader.classList.add('background-shader-contact');
+
     // Address
     locHeading.textContent = 'Our Contact:';
-    addressInfo.textContent = '555 Restaurantay Lane, Suite 3\nAccra, GH 55555-5555';
+    addressInfo.textContent = '555 Gentium Lane, Suite 3\nAccra, GH 55555-5555';
     phone.textContent = 'Tel: 555-555-5555';
     address.appendChild(addressInfo);
     address.appendChild(phone);
@@ -26,7 +29,7 @@ export function createContact() {
     locSection.appendChild(address);
 
     // Form
-    formHeading.textContent = "We'd love to hear from you!";
+    formHeading.textContent = "Let's hear from you:";
     const formInfo = [
         { label: 'Name', inputType: 'text', name: 'name' },
         { label: 'Email', inputType: 'email', name: 'email' },
@@ -34,13 +37,16 @@ export function createContact() {
     ];
 
     formInfo.forEach(field => {
+        const para = document.createElement('p');
         const label = document.createElement('label');
+
+        para.classList.add('form-row');
         label.setAttribute('for', field.name);
         label.textContent = field.label;
         let input;
 
         let inputType = field.inputType;
-        if (inputType === 'textArea') {
+        if (inputType === 'textarea') {
             input = document.createElement('textarea');
             input.setAttribute('id', field.name);
             input.setAttribute('name', field.name);
@@ -52,16 +58,17 @@ export function createContact() {
             input.setAttribute('name', field.name);
         }
 
-        form.appendChild(label);
-        form.appendChild(input);
+        para.appendChild(label);
+        para.appendChild(input);
+        form.appendChild(para);
     });
     sendBtn.textContent = 'Submit';
     form.appendChild(sendBtn);
     formSection.appendChild(formHeading);
     formSection.appendChild(form);
 
-    contactPage.appendChild(locSection);
-    contactPage.appendChild(formSection);
+    shader.appendChild(locSection);
+    shader.appendChild(formSection);
 
-    mainContent.appendChild(contactPage);
+    mainContent.appendChild(shader);
 }
