@@ -22,10 +22,18 @@
     background-color: rgb(68, 68, 68);
 }
 
+/* VARIABLES */
+:root {
+    --primary-dark-clr: rgb(29, 25, 12);
+    --primary-light-clr: rgb(231, 239, 246);
+    --primary-spacing: 4rem;
+    --letter-spacing: 0.1ch;
+}
+
 /* GENERAL */
 body {
     /* min-height: 100vh; */
-    color: rgb(231, 239, 246);
+    color: var(--primary-light-clr);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,23 +45,22 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    min-height: calc(100vh - 4rem);
+    min-height: calc(100vh - var(--primary-spacing));
 }
 
 /* HEADER */
 header {
-    height: 4rem;
+    height: var(--primary-spacing);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(29, 25, 12);
-    color: rgb(231, 239, 246);
+    background-color: var(--primary-dark-clr);
 }
 
 .restaurant-name {
     font-size: 3rem;
     font-style: italic;
-    letter-spacing: 0.1ch;
+    letter-spacing: var(--letter-spacing);
     padding: 0 1rem;
 }
 
@@ -64,8 +71,8 @@ nav {
 .nav-button {
     font-size: 1.2rem;
     margin: 0 1rem;
-    letter-spacing: 0.1ch;
-    color: rgb(231, 239, 246);
+    letter-spacing: var(--letter-spacing);
+    color: var(--primary-light-clr);
     background-color: transparent;
     border: none;
 }
@@ -88,7 +95,7 @@ nav {
 }
 
 .hero-message {
-    font-size: 4rem;
+    font-size: var(--primary-spacing);
     text-align: center;
     margin-top: 10rem;
 }
@@ -96,7 +103,7 @@ nav {
 .background-shader {
     background-color: rgba(0, 0, 0, 0.402);
     min-height: 100%;
-    padding: 4rem;
+    padding: var(--primary-spacing);
     margin: 0 auto;
 }
 
@@ -111,7 +118,7 @@ nav {
     font-size: 1.5rem;
     width: 600px;
     padding-left: 7rem;
-    margin-bottom: 4rem;
+    margin-bottom: var(--primary-spacing);
 }
 
 .background-shader-contact>section h4 {
@@ -132,8 +139,8 @@ nav {
     width: 80%;
     font-size: 1rem;
     padding: 7px;
-    background-color: rgb(231, 239, 246);
-    color: rgb(29, 25, 12);
+    background-color: var(--primary-light-clr);
+    color: var(--primary-dark-clr);
 }
 
 .form-row textarea {
@@ -153,7 +160,7 @@ nav {
 .background-shader-contact button {
     font-weight: bold;
     font-size: 1.2rem;
-    letter-spacing: 0.1ch;
+    letter-spacing: var(--letter-spacing);
     border: none;
 }
 
@@ -162,5 +169,5 @@ nav {
 }
 
 .background-shader-contact button:active {
-    text-shadow: 0.5px 0.5px rgb(29, 25, 12);
+    text-shadow: 0.5px 0.5px var(--primary-dark-clr);
 }
