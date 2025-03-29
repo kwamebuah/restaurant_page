@@ -97,3 +97,68 @@ nav {
     padding: 4rem;
     margin: 4rem auto;
 }
+
+/* CONTACT */
+.background-shader-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-shader-contact>section {
+    font-size: 1.5rem;
+    width: 600px;
+    padding-left: 7rem;
+    margin-bottom: 4rem;
+}
+
+.background-shader-contact>section h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.background-shader-contact>section:first-child pre,
+.background-shader-contact>section:first-child p {
+    font-style: normal;
+    font-family: inherit;
+    line-height: 2rem;
+}
+
+.form-row input,
+.form-row textarea,
+.background-shader-contact button {
+    width: 80%;
+    font-size: 1rem;
+    padding: 7px;
+    background-color: rgb(231, 239, 246);
+    color: rgb(29, 25, 12);
+}
+
+.form-row textarea {
+    min-height: 200px;
+    resize: none;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+}
+
+.background-shader-contact button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1ch;
+    border: none;
+}
+
+.background-shader-contact button:hover {
+    cursor: pointer;
+}
+
+.background-shader-contact button:active {
+    text-shadow: 0.5px 0.5px rgb(29, 25, 12);
+}
