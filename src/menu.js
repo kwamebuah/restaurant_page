@@ -5,6 +5,7 @@ import meal4 from "./images/menu/keesha-s-kitchen-KRbF_wsztBE-unsplash.jpg";
 
 export function createMenu() {
     const mainContent = document.querySelector('#content');
+    const shader = document.createElement('div');
     const heading = document.createElement('h3');
 
     // Clear previous page
@@ -12,8 +13,11 @@ export function createMenu() {
         mainContent.removeChild(mainContent.firstChild);
     }
 
+    shader.classList.add('background-shader');
+    shader.classList.add('background-shader-menu');
+
     heading.textContent = 'Menu';
-    mainContent.appendChild(heading);
+    shader.appendChild(heading);
 
     const menuList = [
         {
@@ -28,7 +32,7 @@ export function createMenu() {
         },
         {
             name: 'Pasta with Tomato Sauce',
-            desc: 'Al dente pasta in tomato sauce topped with parsely with chicken. A hark to the familiar Italian cuisine.',
+            desc: 'Al dente pasta in tomato sauce topped with parsely and chicken. A hark to the familiar Italian cuisine.',
             img: meal3,
         },
         {
@@ -41,17 +45,24 @@ export function createMenu() {
     menuList.forEach(menuItem => {
         const menuCard = document.createElement('article');
         const foodName = document.createElement('h4');
+        const imgDesc = document.createElement('div');
         const foodDesc = document.createElement('p');
         const foodImg = document.createElement('img');
+        const imgDiv = document.createElement('div');
 
+        menuCard.classList.add('menu-card');
+        imgDesc.classList.add('img-description');
+        imgDiv.classList.add('img-div');
         foodName.textContent = menuItem.name;
         foodDesc.textContent = menuItem.desc;
         foodImg.src = menuItem.img;
-        foodImg.width = 400;
-        foodImg.height = 400;
+
         menuCard.appendChild(foodName);
-        menuCard.appendChild(foodImg);
-        menuCard.appendChild(foodDesc);
-        mainContent.appendChild(menuCard);
+        imgDiv.appendChild(foodImg);
+        imgDesc.appendChild(imgDiv);
+        imgDesc.appendChild(foodDesc);
+        menuCard.appendChild(imgDesc);
+        shader.appendChild(menuCard);
     });
+    mainContent.appendChild(shader);
 }
