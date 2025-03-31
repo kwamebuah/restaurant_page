@@ -40,7 +40,6 @@
 
 /* GENERAL */
 body {
-    /* min-height: 100vh; */
     color: var(--primary-light-clr);
     display: flex;
     flex-direction: column;
@@ -48,7 +47,6 @@ body {
 }
 
 #content {
-    /* color: aliceblue; */
     background-image: url("./images/bg_img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
