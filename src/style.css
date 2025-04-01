@@ -61,6 +61,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-dark-clr);
+    position: sticky;
+    top: 0;
 }
 
 .restaurant-name {
